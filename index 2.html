@@ -44,7 +44,6 @@
       margin-top: 5px;
     }
   </style>
-
 </head>
 <body onload="init()">
  <!--  Nav bar that is responsive (container-fluid with data-toggle at collapse) -->
@@ -76,23 +75,34 @@
         <p class="formInfo">Coefficients go here<br>
 
           a = <input size="5" type="text" id="quadA" value="1"> <br>
-          b = <input size="5" type="text" id="linB" value="0"> <br>
-          c = <input size="5" type="text" id="constant" value="0"> <br>
-          <button class="btn" onclick="">Submit Values</button>
+          b = <input size="5" type="text" id="linB" value="2"> <br>
+          c = <input size="5" type="text" id="constant" value="2"> <br>
+          <button class="btn" onclick="QF()">Submit Values</button>
         </p>
       </div>
 
       <div class="myResults">
-        <p id= "solution">x-int </p>
-        <p id= "solution">x-int </p>
-        <p id= "solution">y-int </p>
-        <p id= "solution">corresponding pointat (?,?) </p>
+        <p id= "solution1">x-int </p>
+        <p id= "solution2">x-int </p>
+        <p id= "y-int">y-int </p>
+        <p id= "corresponding">corresponding pointat (?,?) </p>
         <p id= "solution">vertext is at (0,0) </p>
-        <p id= "solution">symmetry line is at x=? </p>
+        <p id= "symmetry">symmetry line is at x=? </p>
       </div>
     </div>
+        <div  class="myButtons">
+          <button  type="button" class="btn btn-primary btn-med" onclick="
+          zoomIn()"><span class="glyphicon glyphicon-zoom-in" ></span></button>
+          <button type="button" class="btn btn-primary btn-med" onclick="zoomOut()" ><span class="glyphicon glyphicon-zoom-out"></span>
+        </button>
+        <button  class="btn btn-primary btn-med" onclick=init()">
+        Reset Grid</button>
+
+
+        </div>
     <div class="col-sm-8 text-left"> 
       <canvas class="canvasGrids" id="mycanvas"></canvas>
+
     </div>
   </div>
 </div>
